@@ -261,7 +261,7 @@ body > #ajaxBusy.loading p {
   content: "";
   width: 30px;
   height: 30px;
-  background-image: url(/images/arrow-prev.png);
+  background-image: url("./images/arrow-prev.png");
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -269,7 +269,7 @@ body > #ajaxBusy.loading p {
   content: "";
   width: 30px;
   height: 30px;
-  background-image: url(/images/arrow-next.png);
+  background-image: url("./images/arrow-next.png");
   background-position: center;
   background-repeat: no-repeat;
 }
