@@ -11,7 +11,6 @@
     width: 100%;
     display: flex;
     .product__thumbs-list {
-      // height: 496px;
       width: 77px;
       display: flex;
       flex-direction: column;
@@ -48,7 +47,6 @@
       }
       .slick-list {
         width: 100%;
-        // height: calc(100% - 60px) !important;
         overflow: hidden;
         display: flex;
         .slick-track {
@@ -74,7 +72,6 @@
     }
     .product__images-list {
       width: 496px;
-      // height: 496px;
       .slick-list {
         width: 100%;
         display: flex;
