@@ -1,96 +1,97 @@
-@import "./reset.scss";
+@import './reset.scss';
 
 .product__images-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  .product__images-box {
-    max-width: 597px;
-    width: 100%;
-    display: flex;
-    .product__thumbs-list {
-      width: 77px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-right: 24px;
-      .slick-arrow {
-        width: 30px;
-        height: 30px;
-        background-color: #882182;
-        border-radius: 5px;
-        font-size: 0;
-        display: flex;
-        border: none;
-      }
-      .slick-prev{
-        &::after{
-          content: '';
-          width: 30px;
-          height: 30px;
-          background-image: url('./images/arrow-prev.png');
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-      }
-      .slick-next{
-        &::after{
-          content: '';
-          width: 30px;
-          height: 30px;
-          background-image: url('./images/arrow-next.png');
-          background-position: center;
-          background-repeat: no-repeat;
-        }
-      }
-      .slick-list {
-        width: 100%;
-        overflow: hidden;
-        display: flex;
-        .slick-track {
-          display: flex;
-          flex-direction: column;
-        }
-      }
-      .product__slide-thumb {
-        margin-top: 4px;
-        margin-bottom: 4px;
-        border: 0.5px solid #b0b4b9;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 77px;
-        height: 77px;
-      }
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-    .product__images-list {
-      width: 496px;
-      .slick-list {
-        width: 100%;
-        display: flex;
-        overflow: hidden;
-        height: 100%;
-        border: 0.5px solid #b0b4b9;
-        .slick-track {
-          display: flex;
-          .product__slide-image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-        }
-      }
-      img {
-        width: 100%;
-        height: auto;
-      }
-    }
-  }
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+
+	.product__images-box {
+		max-width: 597px;
+		width: 100%;
+		display: flex;
+		.product__thumbs-list {
+			width: 77px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-right: 24px;
+			.slick-arrow {
+				width: 30px;
+				height: 30px;
+				background-color: #882182;
+				border-radius: 5px;
+				font-size: 0;
+				display: flex;
+				border: none;
+			}
+			.slick-prev {
+				&::after {
+					content: '';
+					width: 30px;
+					height: 30px;
+					background-image: url('./images/arrow-prev.png');
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+			.slick-next {
+				&::after {
+					content: '';
+					width: 30px;
+					height: 30px;
+					background-image: url('./images/arrow-next.png');
+					background-position: center;
+					background-repeat: no-repeat;
+				}
+			}
+			.slick-list {
+				width: 100%;
+				overflow: hidden;
+				display: flex;
+				.slick-track {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+			.product__slide-thumb {
+				margin-top: 4px;
+				margin-bottom: 4px;
+				border: 0.5px solid #b0b4b9;
+				box-sizing: border-box;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				width: 77px;
+				height: 77px;
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		.product__images-list {
+			width: 496px;
+			.slick-list {
+				width: 100%;
+				display: flex;
+				overflow: hidden;
+				height: 100%;
+				border: 0.5px solid #b0b4b9;
+				.slick-track {
+					display: flex;
+					.product__slide-image {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+			}
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
 }

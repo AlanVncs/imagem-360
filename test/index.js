@@ -1,84 +1,88 @@
 const Produto = {
-  init: function () {
-    Produto.slickImages();
-  },
-  slickImages: () => {
-    const config = {
-      thumbParent: ".product__thumbs-list",
-      principalParent: ".product__images-list",
-    };
+	init: function () {
+		Produto.slickImages()
+		Produto.setImg360()
+	},
 
-    Produto.ProductImagesSlick(config);
-  },
-  ProductImagesSlick: ({ principalParent, thumbParent }) => {
-    $(principalParent).slick({
-      lazyLoad: "ondemand",
-      slidesToShow: 1,
-      slidesToShow: 1,
-      arrows: false,
-      infinite: false,
-      dots: false,
-      asNavFor: thumbParent,
-    });
+	slickImages: () => {
+		const config = {
+			thumbParent: '.product__thumbs-list',
+			principalParent: '.product__images-list',
+		}
 
-    $(thumbParent).slick({
-      slidesToShow: 5,
-      slidesToScroll: 1,
-      lazyLoad: "ondemand",
-      arrows: true,
-      dots: false,
-      infinite: false,
-      asNavFor: principalParent,
-      vertical: true,
-      focusOnSelect: true
-    });
-  },
-};
+		Produto.ProductImagesSlick(config)
+	},
 
-Produto.init();
+	ProductImagesSlick: ({ principalParent, thumbParent }) => {
+		$(principalParent).slick({
+			lazyLoad: 'ondemand',
+			slidesToShow: 1,
+			slidesToShow: 1,
+			arrows: false,
+			infinite: false,
+			dots: false,
+			asNavFor: thumbParent,
+		})
 
+		$(thumbParent).slick({
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			lazyLoad: 'ondemand',
+			arrows: true,
+			dots: false,
+			infinite: false,
+			asNavFor: principalParent,
+			vertical: true,
+			focusOnSelect: true,
+		})
+	},
 
-const imageArray = [
-	'Filename_01.jpg',
-	'Filename_02.jpg',
-	'Filename_03.jpg',
-	'Filename_04.jpg',
-	'Filename_05.jpg',
-	'Filename_06.jpg',
-	'Filename_07.jpg',
-	'Filename_08.jpg',
-	'Filename_09.jpg',
-	'Filename_10.jpg',
-	'Filename_11.jpg',
-	'Filename_12.jpg',
-	'Filename_13.jpg',
-	'Filename_14.jpg',
-	'Filename_15.jpg',
-	'Filename_16.jpg',
-	'Filename_17.jpg',
-	'Filename_18.jpg',
-	'Filename_19.jpg',
-	'Filename_20.jpg',
-	'Filename_21.jpg',
-	'Filename_22.jpg',
-	'Filename_23.jpg',
-	'Filename_24.jpg',
-	'Filename_25.jpg',
-	'Filename_26.jpg',
-	'Filename_27.jpg',
-	'Filename_28.jpg',
-	'Filename_29.jpg',
-	'Filename_30.jpg',
-	'Filename_31.jpg',
-	'Filename_32.jpg',
-	'Filename_33.jpg',
-	'Filename_34.jpg',
-	'Filename_35.jpg',
-	'Filename_36.jpg',
-]
+	setImg360: function () {
+		const imageArray = [
+			'./images/Filename_01.jpg',
+			'./images/Filename_02.jpg',
+			'./images/Filename_03.jpg',
+			'./images/Filename_04.jpg',
+			'./images/Filename_05.jpg',
+			'./images/Filename_06.jpg',
+			'./images/Filename_07.jpg',
+			'./images/Filename_08.jpg',
+			'./images/Filename_09.jpg',
+			'./images/Filename_10.jpg',
+			'./images/Filename_11.jpg',
+			'./images/Filename_12.jpg',
+			'./images/Filename_13.jpg',
+			'./images/Filename_14.jpg',
+			'./images/Filename_15.jpg',
+			'./images/Filename_16.jpg',
+			'./images/Filename_17.jpg',
+			'./images/Filename_18.jpg',
+			'./images/Filename_19.jpg',
+			'./images/Filename_20.jpg',
+			'./images/Filename_21.jpg',
+			'./images/Filename_22.jpg',
+			'./images/Filename_23.jpg',
+			'./images/Filename_24.jpg',
+			'./images/Filename_25.jpg',
+			'./images/Filename_26.jpg',
+			'./images/Filename_27.jpg',
+			'./images/Filename_28.jpg',
+			'./images/Filename_29.jpg',
+			'./images/Filename_30.jpg',
+			'./images/Filename_31.jpg',
+			'./images/Filename_32.jpg',
+			'./images/Filename_33.jpg',
+			'./images/Filename_34.jpg',
+			'./images/Filename_35.jpg',
+			'./images/Filename_36.jpg',
+		]
 
-const $mainContainer = document.querySelector('#img360-container')
+		const $mainContainer = document.querySelector('.product__slide-image.video')
 
-const img360 = new Img360($mainContainer, imageArray)
+		const img360 = new Img360({ $mainContainer, imageArray, autoplaySpeed: 200 })
+		img360.startAutoplay()
+		// img360.isAutoPlaying()
+	},
+}
 
-img360.prevImage()
+Produto.init()
